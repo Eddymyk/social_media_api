@@ -2,6 +2,10 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
 from rest_framework.authtoken.models import Token
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Welcome to Social Media API!")
 
 from .serializers import (
     RegisterSerializer,
